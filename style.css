@@ -1,0 +1,43 @@
+#map {
+    height: 650px;
+    z-index: 1;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+.legend{
+    position: absolute;
+    bottom: 30px;
+    left:20px;
+    width: 320px;
+    height: 160px;
+    background: rgb(219, 207, 207);
+    z-index: 10;
+    border-radius: 8px;
+}
+.legend h4{
+    text-align: center;
+}
+.legend .wrapper #legend3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+#legend1{
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    bottom: 30px;
+    right:20px;
+    width: 240px;
+    height: 100px;
+    background: rgb(219, 207, 207);
+    z-index: 10;
+    border-radius: 8px;
+}

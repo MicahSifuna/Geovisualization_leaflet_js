@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+        crossorigin=""/>
+
+        <!-- geocontrolcss -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+        <!-- leaflet js -->
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+        crossorigin=""></script>
+
+        <!-- jquery link  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- geocontroljs -->
+        <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="header">
+            <h3>GeoVisualization of Kenya Data</h3>
+        </div>
+        <div id="map"></div>
+        <!-- legend1 -->
+        <div class="legend">
+            <h4>GRASSLANDS</h4>
+            <div class="wrapper">
+                <div id="legend3">
+                    <img src="https://geoportal.icpac.net/geoserver/ows?service=WMS&request=GetLegendGraphic&format=image/png&WIDTH=20&HEIGHT=20&LAYER=geonode:ken_grasslands&STYLE=ken_grasslands&version=1.3.0&sld_version=1.1.0&legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on" alt="Kenya grasslands Legend" style="margin: 10px auto;">
+                </div>
+            </div>
+        </div>
+        <!-- legend2 -->
+        <div id="legend1">
+            <div>
+                <p>Forests</p>
+                <img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=30&HEIGHT=30&LAYER=GEOVISUALIZATION:ken_forests" alt="Kenya Forest Legend">
+            </div>
+            <div>
+                <p>Croplands</p>
+                <img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=30&HEIGHT=30&LAYER=GEOVISUALIZATION:kenya_croplands_2015" alt="Kenya croplands Legend">
+            </div>
+        </div>
+
+        <script src="./index.js" async defer></script>
+    </body>
+</html>
